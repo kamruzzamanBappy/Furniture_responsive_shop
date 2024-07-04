@@ -14,6 +14,9 @@
     --text-color:#000000;
     --main-color:#83b735;
 }
+section{
+    padding: 50px 10%;
+}
 header{
     position: fixed;
     width: 100%;
@@ -36,4 +39,47 @@ header{
 }
 .navbar{
     position: relative;
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+.home-text h1{
+    font-size: 2.7rem;
+}
+.home-text p{
+    font-size: 0.938rem;
+    margin: 0.4rem 0 1.8rem;
+}
+.home-text span{
+    color: var(--main-color);
+}
+.btn{
+    padding: 10px 14px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 14px;
 }

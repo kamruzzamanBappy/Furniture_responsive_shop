@@ -1,85 +1,118 @@
-/*Google Fonts */
- 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- *{margin: 0;
-    padding: 0;
+*{
+    margin:0 ;
+    padding:0 ;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top:2rem ;
-    list-style: none;
-    text-decoration: none;
-    
-    font-family: 'Poppins', sans-serif;}
-:root{
-    --text-color:#000000;
-    --main-color:#83b735;
+    font-family: sans-serif;
 }
-section{
-    padding: 50px 10%;
+
+html,body{
+    width:100% ;
+    height: 100%;
 }
-header{
-    position: fixed;
+#main{
     width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
+    height:100% ;
+ 
     display: flex;
-    align-items: center;
+}
+#left{
+    width: 40%;
+    height: 100%;
+     position: relative;
+     /* center */
+}
+#lnav{
+    display: flex;
     justify-content: space-between;
-    padding: 18px 100px;
-    background:#edecea;
-}
-.logo{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-.logo span{
-    color: var(--main-color);
-}
-.navbar{
-    position: relative;
-    display: flex;
-}
-.navbar a{
-    font-size: 1rem;
-    padding: 10px 20px;
-    font-weight: 500;
-    color: var(--text-color);
-}
-.navbar a:hover{
-    color: var(--main-color);
-}
-#menu-icon{
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
-}
-.home{
     width: 100%;
-    min-height: 100vh;
-    background-image: url(images/img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
+    padding: 20px 30px;
 }
-.home-text h1{
-    font-size: 2.7rem;
-}
-.home-text p{
-    font-size: 0.938rem;
-    margin: 0.4rem 0 1.8rem;
-}
-.home-text span{
-    color: var(--main-color);
-}
-.btn{
-    padding: 10px 14px;
-    background-color: var(--main-color);
-    color: #fff;
-    border-radius: 0.3rem;
+#lnavr a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
     font-size: 14px;
+    font-weight: 500;
+}
+
+#lnavr i{
+    color: royalblue;
+}
+
+/*how can a sentence in center */
+#left #textcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#textcenter h1{
+    font-size: 90px;
+    font-weight: 900;
+}
+#textcenter p{
+    opacity: 6;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#textcenter a{
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+/*twiteer acount up side so balence */ 
+#lnavr{
+display: flex;
+align-items: center;
+}
+
+#right{
+    width:60% ;
+    height:100% ;
+    background-color: white;
+}
+#rtop{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background-color: royalblue;
+}
+#rbottom{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(242,178,59);
+}
+#rtopleft{
+    width: 55%;
+    height: 100%;
+   background-image: url(https://unsplash.com/photos/orange-fruit-U1iYwZ8Dx7k);
+
+background-size: cover;
+background-position: center;
+}
+#rtopright{
+    width: 45%;
+    height: 100%;
+    background-image: url(https://unsplash.com/photos/sliced-orange-fruit-on-blue-surface-8ZGgg6rhzxs);
+    background-size: cover;
+    background-position: center;
+}
+
+@media(max-width:500px){
+    #main{
+        flex-direction: column;
+    }
+    #main #left{
+        width: 100%;
+    }
+    #main #right{
+        width: 100%;
+    }
 }
